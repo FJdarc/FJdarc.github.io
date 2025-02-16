@@ -4,11 +4,11 @@ plugins:
   - jekyll-regex-replace
 
 # SEO相关信息
-title: TMaize Blog
-description: TMaize的个人博客
-keywords: TMaize,Blog,Java,Html,JavaScript
-author: TMaize
-footerText: 'Copyright © 2016 皖ICP备16016174号'
+title: FJdarc Blog
+description: FJdarc的个人博客
+keywords: FJdarc,Blog,C++,UE,Python
+author: FJdarc
+footerText: ''
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
@@ -20,11 +20,11 @@ exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'Gemfile', 'Gemfile.
 
 # 域名配置
 # baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
-domainUrl: 'https://blog.tmaize.net'
+domainUrl: 'https://fjdarc.github.io'
 baseurl: ''
 
 # 吐个槽地址，会在chat页面中重定向到该地址
-tucaoUrl: https://support.qq.com/product/86335
+tucaoUrl: 
 
 # 菜单
 # 必填字段 title: '文本' url: '链接'
@@ -38,8 +38,8 @@ menu:
     url: /pages/search.html
   - title: 友链
     url: /pages/links.html
-  - title: 留言
-    url: /pages/chat.html
+  # - title: 留言
+  #   url: /pages/chat.html
   - title: 关于
     url: /pages/about.html
 
