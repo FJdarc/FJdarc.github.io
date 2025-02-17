@@ -17,7 +17,7 @@ self.skipWaiting()
 self.addEventListener('install', function (event) {
   console.log('serviceWorker install')
   event.waitUntil(
-    fetch(baseUrl + '/index.html')
+    fetch(baseUrl + '/index')
       .then(resp => resp.text())
       .then(html => {
         let reg = /(href|src)=\"(.+?)\"/g // 匹配链接
