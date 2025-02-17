@@ -1,1 +1,0 @@
-<embed src="{{ site.domainUrl }}{{ site.baseurl }}/static/Resume.pdf" type="application/pdf" width="100%" height="600px">

@@ -5,7 +5,7 @@ title: 关于我
 
 > Hello 陌生人，欢迎访问 FJdarc Blog
 
-<a href="{{ site.domainUrl }}{{ site.baseurl }}/pages/Resume-markdown">我的简历</a>
+<a href="{{ site.domainUrl }}{{ site.baseurl }}/pages/Resume">我的简历</a>
 
 主题来自[tmaize-blog](https://github.com/TMaize/tmaize-blog)
 
