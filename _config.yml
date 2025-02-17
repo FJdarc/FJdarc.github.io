@@ -11,7 +11,7 @@ author: FJdarc
 footerText: ''
 
 # 这些不要动
-permalink: /posts/:year/:month/:day/:title
+permalink: /posts/:year/:month/:day/:title.html
 kramdown:
   auto_ids: true
   input: GFM
@@ -33,15 +33,15 @@ menu:
   - title: 首页
     url: /
   - title: 归类
-    url: /pages/categories
+    url: /pages/categories.html
   - title: 搜索
-    url: /pages/search
+    url: /pages/search.html
   # - title: 友链
   #   url: /pages/links.html
   # - title: 留言
   #   url: /pages/chat.html
   - title: 关于
-    url: /pages/about
+    url: /pages/about.html
 
 # 点击页面文字冒出特效,不需要请设置为false
 extClickEffect: true
