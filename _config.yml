@@ -33,15 +33,15 @@ menu:
   - title: 首页
     url: /
   - title: 归类
-    url: /pages/categories.html
+    url: /pages/categories
   - title: 搜索
-    url: /pages/search.html
+    url: /pages/search
   # - title: 友链
   #   url: /pages/links.html
   # - title: 留言
   #   url: /pages/chat.html
   - title: 关于
-    url: /pages/about.html
+    url: /pages/about
 
 # 点击页面文字冒出特效,不需要请设置为false
 extClickEffect: true
