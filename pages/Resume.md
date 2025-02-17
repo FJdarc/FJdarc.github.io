@@ -1,8 +1,3 @@
- ---
-layout: page
-title: 简历
----
-
  <center>
      <h1>李纲</h1>
      <div>
