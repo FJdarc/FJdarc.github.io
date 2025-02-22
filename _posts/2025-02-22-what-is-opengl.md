@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: 什么是OpenGL
-categories: [OpenGL，学习]
+categories: [OpenGL, 学习]
 ---
 
 OpenGL（Open Graphics Library）是一个跨平台的图形编程接口标准，通过驱动程序由显卡厂商具体实现，与OpenGL类似的还有Direct3D，Vulcan，Metal等。
