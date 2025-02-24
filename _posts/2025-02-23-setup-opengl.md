@@ -3,15 +3,33 @@ layout: mypost
 title: 设置OpenGL环境并用C++绘制一个窗口
 categories: [OpenGL, 学习]
 ---
-https://github.com/glfw/glfw/releases/download/3.4/glfw-3.4.bin.WIN64.zip
+#### GLFW
 
-https://github.com/glfw/glfw/releases/download/3.4/glfw-3.4.bin.WIN32.zip
+GLFW 是一个开源的跨平台库，用于在桌面环境中开发 OpenGL、OpenGL ES 和 Vulkan 应用程序。它提供了一套简单的 API 用于创建窗口、上下文和绘图表面，并接收用户输入和事件处理。
 
-Visual Studio创建CMake项目
+进入[GLFW下载页面](https://www.glfw.org/download.html)，选择Windows pre-compiled binaries右侧的64-bit Windows binaries和32-bit Windows binaries下载。
 
-在项目根目录创建文件夹Dependencies
+![Windows pre-compiled binaries](Windows pre-compiled binaries.png)
 
+#### CMake in Visual Studio
 
+在VS中创建CMake新项目，配置如下
+
+![New CMake Config](New CMake Config.png)
+
+创建之后，在项目根目录新建文件夹如下
+
+![Dependencies Tree 1](Dependencies Tree 1.png)
+
+将下载的64-bit Windows binaries和32-bit Windows binaries压缩包解压，移动64或者32里面的include文件夹到Dependencies\GLFW\下，选择对应版本的lib-vc版本文件夹，例如我是VS2022，就移动32里面的lib-vc2022到Dependencies\GLFW\WIN32，移动64里面的lib-vc2022到Dependencies\GLFW\WIN64。
+
+移动完毕后的Dependencies文件夹如下
+
+![Dependencies Tree 2](Dependencies Tree 2.png)
+
+#### 代码部分
+
+OpenGL\OpenGL\CMakeList.txt
 
 ```cmake
 # CMakeList.txt: OpenGL 的 CMake 项目，在此处包括源代码并定义
@@ -43,7 +61,7 @@ target_link_libraries(OpenGL PRIVATE ${GLFW_LIBRARY} opengl32)
 # TODO: 如有需要，请添加测试并安装目标。
 ```
 
-
+OpenGL\OpenGL\OpenGL.cpp
 
 ```c++
 // OpenGL.cpp: 定义应用程序的入口点。
@@ -94,7 +112,7 @@ int main(void)
 }
 ```
 
-
+OpenGL\OpenGL\OpenGL.h
 
 ```c++
 // OpenGL.h: 标准系统包含文件的包含文件
@@ -107,3 +125,6 @@ int main(void)
 // TODO: 在此处引用程序需要的其他标头。
 ```
 
+
+
+**运行之后的效果是一个窗口当中显示一个三角形**
