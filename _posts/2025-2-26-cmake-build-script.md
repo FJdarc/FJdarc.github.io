@@ -38,7 +38,7 @@ positional arguments:
   {st,sh}       库类型:
                 st - 静态库 (默认)
                 sh - 动态库/DLL
-  program_name  指定输出程序名称 (默认使用当前目录名)
+  program_name  指定运行程序名称 (默认使用当前目录名)
 
 options:
   -h, --help    显示帮助信息并退出
