@@ -2,7 +2,9 @@
 
 ---
 
-脚本需要gcc和g++，cmake和python。
+[github](https://github.com/FJdarc/CMakeBuildScript)
+
+需要安装gcc和g++，cmake和python。
 
 进入CMakeLists.txt文件夹
 
@@ -40,6 +42,4 @@ positional arguments:
 options:
   -h, --help    显示帮助信息并退出
 ```
-
- 
 
