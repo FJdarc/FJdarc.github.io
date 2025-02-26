@@ -1,5 +1,7 @@
-# 一个用python写的CMake构建脚本
-
+---
+layout: mypost
+title: 一个用python写的CMake构建脚本
+categories: [Python, CMake, C++]
 ---
 
 [github](https://github.com/FJdarc/CMakeBuildScript)
@@ -18,7 +20,6 @@
 
 `curl -O https://raw.githubusercontent.com/FJdarc/CMakeBuildScript/master/Cbs.py && chmod +x ./Cbs.py && .\Cbs.py -h`
 
----
 
 即可得到Cbs脚本的帮助信息如下
 
