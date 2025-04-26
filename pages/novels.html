@@ -3,6 +3,10 @@ layout: page
 title: 小说
 ---
 
+<style>
+
+</style>
+
 <div class="page page-index">
     {% for novel in site.novels  -%}
       <div class="list-post">
@@ -12,6 +16,7 @@ title: 小说
             <div class="title">
               <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" class="hover-underline">{{ novel.name }}</a>
             </div>
+            <div id="novel-content"></div>
           </li>
         </ul>
       </div>
