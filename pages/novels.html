@@ -5,55 +5,6 @@ title: 小说
 
 <list>
     {% for novel in site.novels %}
-    <li>
-        <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" 
-           onclick="loadNovel(event, '{{ novel.title }} - {{ novel.author }}')">
-            {{ novel.title }} - {{ novel.author }}
-        </a>
-    </li>
+        <li><a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}">{{ novel.title }}-{{ novel.author }}</a></li>
     {% endfor %}
 </list>
-
-<!-- 添加内容展示容器 -->
-<div id="novel-container" style="margin-top: 20px; padding: 15px; border: 1px solid #ddd;">
-    <div id="loading" style="display: none;">加载中...</div>
-    <pre id="novel-content" style="white-space: pre-wrap; font-family: sans-serif;"></pre>
-</div>
-
-<script>
-// 初始隐藏容器
-document.getElementById('novel-container').style.display = 'none';
-
-async function loadNovel(event, title) {
-    event.preventDefault();
-    const container = document.getElementById('novel-container');
-    const content = document.getElementById('novel-content');
-    const loading = document.getElementById('loading');
-
-    try {
-        // 显示加载状态
-        container.style.display = 'block';
-        content.style.display = 'none';
-        loading.style.display = 'block';
-
-        // 获取文件内容
-        const response = await fetch(event.target.href);
-        if (!response.ok) throw new Error('文件加载失败');
-        const text = await response.text();
-
-        // 更新界面
-        document.title = title + ' - 小说阅读'; // 修改页面标题
-        content.textContent = text;
-        loading.style.display = 'none';
-        content.style.display = 'block';
-        
-        // 自动滚动到内容区域
-        container.scrollIntoView({ behavior: 'smooth' });
-    } catch (error) {
-        console.error('加载失败:', error);
-        content.textContent = '加载小说内容失败，请稍后再试。';
-        loading.style.display = 'none';
-        content.style.display = 'block';
-    }
-}
-</script>
