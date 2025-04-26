@@ -36,6 +36,8 @@ menu:
     url: /pages/categories.html
   - title: 搜索
     url: /pages/search.html
+  - title: 小说
+    url: /pages/novels.html
   # - title: 友链
   #   url: /pages/links.html
   # - title: 留言
