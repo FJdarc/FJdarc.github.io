@@ -32,13 +32,14 @@ title: 小说
           // 阻止链接默认跳转行为
           event.preventDefault();
           
-          // 向上查找最近的 .list-post 父元素
-          const listPost = this.closest('.list-post');
-          if (listPost) {
-            // 隐藏该列表项
-            listPost.style.display = 'none';
-          }
+          // 获取页面中所有.list-post元素
+          const allListPosts = document.querySelectorAll('.list-post');
+          
+          // 遍历并隐藏所有列表项
+          allListPosts.forEach(post => {
+            post.style.display = 'none';
+          });
         });
       });
     });
-    </script>
+</script>
