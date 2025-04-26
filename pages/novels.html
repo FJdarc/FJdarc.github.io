@@ -4,6 +4,7 @@ title: 小说
 ---
 
 <style>
+    /* 列表样式 */
     .novel-list {
         list-style: none;
         padding: 20px;
@@ -45,7 +46,74 @@ title: 小说
         font-size: 0.9em;
         margin-left: 8px;
     }
-    
+
+    /* 内容容器样式 */
+    #novel-content {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* 加载状态 */
+    .loading {
+        color: #4a90e2;
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* 返回按钮 */
+    .back-button {
+        background: #4a90e2;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: opacity 0.2s;
+    }
+
+    .back-button:hover {
+        opacity: 0.9;
+    }
+
+    /* 错误提示 */
+    .error {
+        background: #ffeaea;
+        border-left: 4px solid #ff4d4d;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 4px;
+        animation: shake 0.5s;
+    }
+
+    .error button {
+        background: none;
+        border: 1px solid #ff4d4d;
+        color: #ff4d4d;
+        margin-top: 10px;
+        padding: 5px 15px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    /* 动画 */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: none; }
+    }
+
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+    }
+
     @media (max-width: 768px) {
         .novel-list {
             margin: 20px;
@@ -59,96 +127,90 @@ title: 小说
         .novel-link {
             font-size: 14px;
         }
+
+        #novel-content {
+            margin: 10px;
+            padding: 15px;
+        }
     }
-    </style>
+</style>
+
+<ul class="novel-list">
+    {% for novel in site.novels %}
+    <li class="novel-item">
+        <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" 
+           class="novel-link"
+           onclick="loadNovel(event, this.href)">
+            {{ novel.title }}
+            <span class="author-name">- {{ novel.author }}</span>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<p id="novel-content"></p>
+
+<script>
+function loadNovel(event, url) {
+    event.preventDefault();
+    const container = document.getElementById('novel-content');
     
-    <ul class="novel-list">
-        {% for novel in site.novels %}
-        <li class="novel-item">
-            <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" 
-               class="novel-link"
-               onclick="loadNovel(event, this.href)">
-                {{ novel.title }}
-                <span class="author-name">- {{ novel.author }}</span>
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+    // 显示加载状态
+    container.innerHTML = '<div class="loading">🚀 正在加载，请稍候...</div>';
     
-    <!-- 内容容器 -->
-    <p id="novel-content" class="content-container"></p>
-    
-    <script>
-    // 动态加载小说内容
-    function loadNovel(event, url) {
-        event.preventDefault();
-        const container = document.getElementById('novel-content');
-        
-        // 显示加载状态
-        container.innerHTML = '<div class="loading">加载中...</div>';
-        
-        // 使用Fetch API获取内容
-        fetch(url)
-            .then(response => response.text())
-            .then(html => {
-                // 创建临时容器解析内容
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
-                
-                // 提取主要内容（假设目标页面有.main-content容器）
-                const content = tempDiv.querySelector('.novel-content') || tempDiv.body;
-                
-                // 插入到指定位置
-                container.innerHTML = content.innerHTML;
-                
-                // 添加返回按钮
-                const backBtn = document.createElement('button');
-                backBtn.className = 'back-button';
-                backBtn.innerHTML = '返回列表';
-                backBtn.onclick = () => {
-                    container.innerHTML = '';
-                    history.replaceState(null, '', window.location.href);
-                };
-                container.prepend(backBtn);
-            })
-            .catch(error => {
-                container.innerHTML = `<p class="error">加载失败，请重试 (${error})</p>`;
-            });
-    }
-    
-    // 添加新样式
-    const style = document.createElement('style');
-    style.textContent = `
-        .content-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-    
-        .loading {
-            color: #4a90e2;
-            text-align: center;
-            padding: 20px;
-        }
-    
-        .back-button {
-            background: #4a90e2;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-bottom: 20px;
-        }
-    
-        .error {
-            color: #e74c3c;
-            padding: 20px;
-            text-align: center;
-        }
-    `;
-    document.head.appendChild(style);
-    </script>
+    fetch(url)
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP错误 ${response.status}`);
+            return response.text();
+        })
+        .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            // 智能内容探测
+            const content = doc.querySelector('.novel-content') || 
+                           doc.querySelector('article') || 
+                           doc.querySelector('main') || 
+                           doc.body;
+            
+            // 内容安全验证
+            if (!content || content.innerHTML.trim().length < 100) {
+                throw new Error('未找到有效内容');
+            }
+            
+            // 克隆并清理内容
+            const cleanContent = content.cloneNode(true);
+            Array.from(cleanContent.querySelectorAll('script, style')).forEach(el => el.remove());
+            
+            // 渲染内容
+            container.innerHTML = '';
+            container.appendChild(cleanContent);
+            
+            // 添加交互元素
+            const backBtn = document.createElement('button');
+            backBtn.className = 'back-button';
+            backBtn.innerHTML = '⬅ 返回列表';
+            backBtn.onclick = () => {
+                container.innerHTML = '';
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+            container.prepend(backBtn);
+            
+            // 自动滚动
+            container.style.opacity = 0;
+            setTimeout(() => {
+                container.style.opacity = 1;
+                container.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
+        })
+        .catch(error => {
+            console.error('加载失败:', error);
+            container.innerHTML = `
+                <div class="error">
+                    <p>❌ 加载失败：${error.message}</p>
+                    <button onclick="this.closest('.error').remove()">关闭提示</button>
+                </div>
+            `;
+        });
+}
+</script>
