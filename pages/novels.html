@@ -4,49 +4,118 @@ title: 小说
 ---
 
 <style>
+    /* 基础布局样式 */
+    #novel-list {
+        display: block; /* 默认显示 */
+    }
+    
     #novel-content {
+        display: none; /* 默认隐藏 */
         margin-top: 20px;
         padding: 15px;
         border: 1px solid #ddd;
         border-radius: 4px;
-        white-space: pre-line; /* 保留换行符 */
+        background: #f8f9fa;
+        white-space: pre-line;
         line-height: 1.6;
         max-height: 80vh;
         overflow-y: auto;
     }
+    
+    /* 链接样式 */
+    .novel-link {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+        color: #0366d6;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+    
+    .novel-link:hover {
+        background: #f6f8fa;
+    }
+    
+    /* 作者信息样式 */
+    .novel-author {
+        color: #6a737d;
+        font-size: 0.9em;
+        margin-left: 15px;
+    }
+    
+    /* 返回按钮样式 */
+    .back-button {
+        display: inline-block;
+        margin-bottom: 15px;
+        padding: 8px 16px;
+        background: #0366d6;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .back-button:hover {
+        background: #0056b3;
+    }
 </style>
-
+    
 <div id="novel-list">
     {% for novel in site.novels %}
-        <a class="novel-link" href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}">{{ novel.title }}</a><div>   {{ novel.author }}</div>
+        <a class="novel-link" href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}">
+            {{ novel.title }}
+            <span class="novel-author">{{ novel.author }}</span>
+        </a>
     {% endfor %}
 </div>
 
-<div id="novel-content" style="margin-top: 20px; white-space: pre-line;"></div>
-
+<div id="novel-content">
+    <div class="back-button">← 返回列表</div>
+    <div class="content-area"></div>
+</div>
+    
 <script>
-// 为所有小说链接添加点击事件
-document.querySelectorAll('.novel-link').forEach(link => {
-    link.addEventListener('click', async (event) => {
-        event.preventDefault(); // 阻止默认跳转行为
+    // 切换显示状态函数
+    function toggleView(showContent) {
+        const list = document.getElementById('novel-list');
+        const content = document.getElementById('novel-content');
         
-        const contentDiv = document.getElementById('novel-content');
-        contentDiv.textContent = '正在加载...'; // 加载提示
-        
-        try {
-            // 获取小说文本内容
-            const response = await fetch(event.target.href);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
-            // 解析文本内容
-            const text = await response.text();
-            
-            // 显示到内容区域（保留换行格式）
-            contentDiv.textContent = text;
-        } catch (error) {
-            console.error('加载失败:', error);
-            contentDiv.textContent = '小说加载失败，请稍后再试';
-        }
+        list.style.display = showContent ? 'none' : 'block';
+        content.style.display = showContent ? 'block' : 'none';
+    }
+    
+    // 返回按钮点击事件
+    document.querySelector('.back-button').addEventListener('click', () => {
+        toggleView(false);
+        history.replaceState(null, '', window.location.pathname);
     });
-});
+    
+    // 小说链接点击事件
+    document.querySelectorAll('.novel-link').forEach(link => {
+        link.addEventListener('click', async (event) => {
+            event.preventDefault();
+            toggleView(true);
+            
+            const contentArea = document.querySelector('.content-area');
+            contentArea.textContent = '正在加载...';
+            
+            try {
+                const response = await fetch(event.target.href);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                
+                const text = await response.text();
+                contentArea.textContent = text;
+                history.pushState({ showContent: true }, '', event.target.href);
+            } catch (error) {
+                console.error('加载失败:', error);
+                contentArea.textContent = '小说加载失败，请稍后再试';
+            }
+        });
+    });
+    
+    // 处理浏览器后退按钮
+    window.addEventListener('popstate', (event) => {
+        toggleView(event.state && event.state.showContent);
+    });
 </script>
