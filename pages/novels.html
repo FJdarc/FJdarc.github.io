@@ -65,10 +65,90 @@ title: 小说
     <ul class="novel-list">
         {% for novel in site.novels %}
         <li class="novel-item">
-            <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" class="novel-link">
+            <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" 
+               class="novel-link"
+               onclick="loadNovel(event, this.href)">
                 {{ novel.title }}
                 <span class="author-name">- {{ novel.author }}</span>
             </a>
         </li>
         {% endfor %}
     </ul>
+    
+    <!-- 内容容器 -->
+    <p id="novel-content" class="content-container"></p>
+    
+    <script>
+    // 动态加载小说内容
+    function loadNovel(event, url) {
+        event.preventDefault();
+        const container = document.getElementById('novel-content');
+        
+        // 显示加载状态
+        container.innerHTML = '<div class="loading">加载中...</div>';
+        
+        // 使用Fetch API获取内容
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                // 创建临时容器解析内容
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                
+                // 提取主要内容（假设目标页面有.main-content容器）
+                const content = tempDiv.querySelector('.novel-content') || tempDiv.body;
+                
+                // 插入到指定位置
+                container.innerHTML = content.innerHTML;
+                
+                // 添加返回按钮
+                const backBtn = document.createElement('button');
+                backBtn.className = 'back-button';
+                backBtn.innerHTML = '返回列表';
+                backBtn.onclick = () => {
+                    container.innerHTML = '';
+                    history.replaceState(null, '', window.location.href);
+                };
+                container.prepend(backBtn);
+            })
+            .catch(error => {
+                container.innerHTML = `<p class="error">加载失败，请重试 (${error})</p>`;
+            });
+    }
+    
+    // 添加新样式
+    const style = document.createElement('style');
+    style.textContent = `
+        .content-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    
+        .loading {
+            color: #4a90e2;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .back-button {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    
+        .error {
+            color: #e74c3c;
+            padding: 20px;
+            text-align: center;
+        }
+    `;
+    document.head.appendChild(style);
+    </script>
