@@ -4,14 +4,11 @@ title: 小说
 ---
 
 <div style="max-width:800px; margin:20px auto;">
-    <h2 style="margin:10px 0;">{{ site.title }}</h2>
-    <p style="color:#666; margin-bottom:20px;">作者：{{ site.author }}</p>
-
     {% for novel in site.novels %}
     <div style="border:1px solid #eee; padding:15px; margin-bottom:15px;">
-        <div style="font-weight:600;">{{ novel.name }}</div>
+        <div style="font-weight:600;">{{ novel.title }}</div>
         <div style="color:#777; font-size:0.9em; margin-top:5px;">
-            {{ novel.author }} · {{ novel.category }}
+            {{ novel.author }}
         </div>
     </div>
     {% endfor %}
