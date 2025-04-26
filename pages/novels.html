@@ -1,0 +1,10 @@
+---
+layout: page
+title: 小说
+---
+
+<list>
+    {% for novel in site.novels %}
+        <li><a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}">{{ novel.title }}{{ novel.author }}</a></li>
+    {% endfor %}
+</list>

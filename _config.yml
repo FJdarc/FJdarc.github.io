@@ -56,8 +56,10 @@ extMath: false
 # 显示访问量统计，由不蒜子提供服务
 extCount: false
 
-# 友情链接
-links:
-  - title: 文科中的技术宅
-    url: https://www.townwang.com
-
+novels:
+  - title: 道诡异仙
+    author: 狐尾的笔
+    url: '/novels/daoguiyixian.txt'
+  - title: 剑来
+    author: 烽火戏诸侯
+    url: '/novels/jianlai.txt'
