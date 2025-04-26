@@ -6,11 +6,11 @@ title: 小说
 <div class="page page-index">
     {% for novel in site.novels  -%}
       <div class="list-post">
+        <span class="date">{{ novel.author }}</span>
         <ul>
           <li>
-            <span class="date">{{ novel.author }}</span>
             <div class="title">
-              <a href="" class="hover-underline">{{ novel.title }}</a>
+              <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" class="hover-underline">{{ novel.title }}</a>
             </div>
           </li>
         </ul>
