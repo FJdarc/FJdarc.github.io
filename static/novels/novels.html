@@ -4,216 +4,119 @@ title: 小说
 ---
 
 <style>
-    /* 列表样式 */
-    .novel-list {
-        list-style: none;
-        padding: 20px;
-        max-width: 800px;
-        margin: 40px auto;
+    /* 基础布局样式 */
+    #novel-list {
+        display: block; /* 默认显示 */
+    }
+    
+    #novel-content {
+        display: none; /* 默认隐藏 */
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
         background: #f8f9fa;
-        border-radius: 10px;
-        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        white-space: pre-line;
+        line-height: 1.6;
+        max-height: 80vh;
+        overflow-y: auto;
     }
     
-    .novel-item {
-        padding: 15px 20px;
-        margin: 10px 0;
-        background: white;
-        border-radius: 5px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        border-left: 4px solid #4a90e2;
-    }
-    
-    .novel-item:hover {
-        transform: translateX(10px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    
+    /* 链接样式 */
     .novel-link {
-        text-decoration: none;
-        color: #2c3e50;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         display: block;
-        font-size: 16px;
+        padding: 10px;
+        margin: 5px 0;
+        color: #0366d6;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background 0.2s;
     }
     
     .novel-link:hover {
-        color: #4a90e2;
+        background: #f6f8fa;
     }
     
-    .author-name {
-        color: #7f8c8d;
+    /* 作者信息样式 */
+    .novel-author {
+        color: #6a737d;
         font-size: 0.9em;
-        margin-left: 8px;
+        margin-left: 15px;
     }
-
-    /* 内容容器样式 */
-    #novel-content {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 30px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* 加载状态 */
-    .loading {
-        color: #4a90e2;
-        text-align: center;
-        padding: 20px;
-    }
-
-    /* 返回按钮 */
+    
+    /* 返回按钮样式 */
     .back-button {
-        background: #4a90e2;
-        color: white;
-        border: none;
+        display: inline-block;
+        margin-bottom: 15px;
         padding: 8px 16px;
+        background: #0366d6;
+        color: white;
         border-radius: 4px;
         cursor: pointer;
-        margin-bottom: 20px;
-        transition: opacity 0.2s;
+        text-decoration: none;
     }
-
+    
     .back-button:hover {
-        opacity: 0.9;
-    }
-
-    /* 错误提示 */
-    .error {
-        background: #ffeaea;
-        border-left: 4px solid #ff4d4d;
-        padding: 20px;
-        margin: 10px 0;
-        border-radius: 4px;
-        animation: shake 0.5s;
-    }
-
-    .error button {
-        background: none;
-        border: 1px solid #ff4d4d;
-        color: #ff4d4d;
-        margin-top: 10px;
-        padding: 5px 15px;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-
-    /* 动画 */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: none; }
-    }
-
-    @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        75% { transform: translateX(5px); }
-    }
-
-    @media (max-width: 768px) {
-        .novel-list {
-            margin: 20px;
-            padding: 10px;
-        }
-        
-        .novel-item {
-            padding: 12px 15px;
-        }
-        
-        .novel-link {
-            font-size: 14px;
-        }
-
-        #novel-content {
-            white-space: pre-wrap; /* 保留空格和换行 */
-            font-family: monospace;
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
+        background: #0056b3;
     }
 </style>
-
-<ul class="novel-list">
+    
+<div id="novel-list">
     {% for novel in site.novels %}
-    <li class="novel-item">
-        <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" 
-           class="novel-link"
-           onclick="loadNovel(event, this.href)">
+        <a class="novel-link" href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}">
             {{ novel.title }}
-            <span class="author-name">- {{ novel.author }}</span>
+            <span class="novel-author">{{ novel.author }}</span>
         </a>
-    </li>
     {% endfor %}
-</ul>
+</div>
 
-<p id="novel-content"></p>
-
+<div id="novel-content">
+    <div class="back-button">← 返回列表</div>
+    
+    <div class="content-area"></div>
+</div>
+    
 <script>
-function loadNovel(event, url) {
-    event.preventDefault();
-    const container = document.getElementById('novel-content');
+    // 切换显示状态函数
+    function toggleView(showContent) {
+        const list = document.getElementById('novel-list');
+        const content = document.getElementById('novel-content');
+        
+        list.style.display = showContent ? 'none' : 'block';
+        content.style.display = showContent ? 'block' : 'none';
+    }
     
-    // 显示加载状态
-    container.innerHTML = '<div class="loading">🚀 正在加载，请稍候...</div>';
+    // 返回按钮点击事件
+    document.querySelector('.back-button').addEventListener('click', () => {
+        toggleView(false);
+        history.replaceState(null, '', window.location.pathname);
+    });
     
-    fetch(url)
-        .then(response => {
-            if (!response.ok) throw new Error(`HTTP错误 ${response.status}`);
-            return response.text();
-        })
-        .then(html => {
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
+    // 小说链接点击事件
+    document.querySelectorAll('.novel-link').forEach(link => {
+        link.addEventListener('click', async (event) => {
+            event.preventDefault();
+            toggleView(true);
             
-            // 智能内容探测
-            const content = doc.querySelector('.novel-content') || 
-                           doc.querySelector('article') || 
-                           doc.querySelector('main') || 
-                           doc.body;
+            const contentArea = document.querySelector('.content-area');
+            contentArea.textContent = '正在加载...';
             
-            // 内容安全验证
-            if (!content || content.innerHTML.trim().length < 100) {
-                throw new Error('未找到有效内容');
+            try {
+                const response = await fetch(event.target.href);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                
+                const text = await response.text();
+                contentArea.textContent = text;
+                history.pushState({ showContent: true }, '', event.target.href);
+            } catch (error) {
+                console.error('加载失败:', error);
+                contentArea.textContent = '小说加载失败，请稍后再试';
             }
-            
-            // 克隆并清理内容
-            const cleanContent = content.cloneNode(true);
-            Array.from(cleanContent.querySelectorAll('script, style')).forEach(el => el.remove());
-            
-            // 渲染内容
-            container.innerHTML = '';
-            container.appendChild(cleanContent);
-            
-            // 添加交互元素
-            const backBtn = document.createElement('button');
-            backBtn.className = 'back-button';
-            backBtn.innerHTML = '⬅ 返回列表';
-            backBtn.onclick = () => {
-                container.innerHTML = '';
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            };
-            container.prepend(backBtn);
-            
-            // 自动滚动
-            container.style.opacity = 0;
-            setTimeout(() => {
-                container.style.opacity = 1;
-                container.scrollIntoView({ behavior: 'smooth' });
-            }, 50);
-        })
-        .catch(error => {
-            console.error('加载失败:', error);
-            container.innerHTML = `
-                <div class="error">
-                    <p>❌ 加载失败：${error.message}</p>
-                    <button onclick="this.closest('.error').remove()">关闭提示</button>
-                </div>
-            `;
         });
-}
+    });
+    
+    // 处理浏览器后退按钮
+    window.addEventListener('popstate', (event) => {
+        toggleView(event.state && event.state.showContent);
+    });
 </script>
