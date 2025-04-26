@@ -35,7 +35,8 @@ title: 小说
     links.forEach(link => {
       link.addEventListener('click', async (event) => {
         event.preventDefault();
-                
+
+        novelDisplay.style.display = 'block';
         novelDisplay.textContent = '正在加载...';
   
         const allListPosts = document.querySelectorAll('.list-post');
@@ -52,8 +53,6 @@ title: 小说
           console.error('加载失败:', error);
           novelDisplay.textContent = '小说加载失败，请稍后再试';
         }
-
-        novelDisplay.style.display = 'block';
       });
     });
   });
