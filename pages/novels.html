@@ -4,21 +4,47 @@ title: 小说
 ---
 
 <style>
-
+    .novel-list {
+        display: block;
+    }
+    .novel-content {
+        display: none;
+    }
 </style>
 
 <div class="page page-index">
     {% for novel in site.novels  -%}
-      <div class="list-post">
+      <div class="list-post novel-list">
         <ul>
           <li>
             <span class="date">{{ novel.author }}</span>
-            <div class="title">
+            <div class="title novel-link">
               <a href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}" class="hover-underline">{{ novel.name }}</a>
             </div>
-            <div id="novel-content"></div>
           </li>
         </ul>
       </div>
+
+      <div class="novel-content">
+        <p>test</p>
+      </div>
     {%- endfor %}
-  </div>
+</div>
+
+<script>
+    function toggleView(showContent) {
+        const list = document.getElementById('novel-list');
+        const content = document.getElementById('novel-content');
+        
+        list.style.display = showContent ? 'none' : 'block';
+        content.style.display = showContent ? 'block' : 'none';
+    }
+
+    document.querySelectorAll('.novel-link').forEach(link => {
+        link.addEventListener('click', async (event) => {
+            event.preventDefault();
+            toggleView(true);
+
+        });
+    });
+</script>
