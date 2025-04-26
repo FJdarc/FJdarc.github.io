@@ -3,19 +3,50 @@ layout: page
 title: 小说
 ---
 
-<div style="max-width:800px; margin:20px auto;">
+<style>
+    #novel-content {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        white-space: pre-line; /* 保留换行符 */
+        line-height: 1.6;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+</style>
+
+<div id="novel-list">
     {% for novel in site.novels %}
-    <div style="border:1px solid #eee; padding:15px; margin-bottom:15px;">
-        <div style="font-weight:600;">{{ novel.title }}</div>
-        <div style="color:#777; font-size:0.9em; margin-top:5px;">
-            {{ novel.author }}
-        </div>
-    </div>
+        <a class="novel-link" href="{{ site.domainUrl }}{{ site.baseurl }}/static{{ novel.url }}">{{ novel.title }}</a><div>   {{ novel.author }}</div>
     {% endfor %}
 </div>
 
-<div></div>
+<div id="novel-content" style="margin-top: 20px; white-space: pre-line;"></div>
 
 <script>
-
+// 为所有小说链接添加点击事件
+document.querySelectorAll('.novel-link').forEach(link => {
+    link.addEventListener('click', async (event) => {
+        event.preventDefault(); // 阻止默认跳转行为
+        
+        const contentDiv = document.getElementById('novel-content');
+        contentDiv.textContent = '正在加载...'; // 加载提示
+        
+        try {
+            // 获取小说文本内容
+            const response = await fetch(event.target.href);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
+            // 解析文本内容
+            const text = await response.text();
+            
+            // 显示到内容区域（保留换行格式）
+            contentDiv.textContent = text;
+        } catch (error) {
+            console.error('加载失败:', error);
+            contentDiv.textContent = '小说加载失败，请稍后再试';
+        }
+    });
+});
 </script>
