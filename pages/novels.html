@@ -20,26 +20,39 @@ title: 小说
         </ul>
       </div>
     {%- endfor %}
+
+    <div id="url-display"></div>
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // 获取所有小说链接
-      const links = document.querySelectorAll('.list-post a.hover-underline');
-      
-      links.forEach(link => {
-        link.addEventListener('click', function(event) {
-          // 阻止链接默认跳转行为
-          event.preventDefault();
-          
-          // 获取页面中所有.list-post元素
-          const allListPosts = document.querySelectorAll('.list-post');
-          
-          // 遍历并隐藏所有列表项
-          allListPosts.forEach(post => {
-            post.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', () => {
+      // 创建信息显示容器
+      const infoBox = document.createElement('div');
+      infoBox.id = 'url-display';
+      document.body.prepend(infoBox);
+    
+      document.querySelectorAll('.list-post a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const clickedUrl = this.href;
+    
+          // 第一步：隐藏所有列表项
+          document.querySelectorAll('.list-post').forEach(post => {
+            post.classList.add('hidden');
           });
+    
+          // 第二步：延迟执行显示操作
+          setTimeout(() => {
+            // 更新信息框内容
+            infoBox.textContent = `正在加载：${new URL(clickedUrl).pathname.split('/').pop()}`;
+            infoBox.classList.add('show');
+    
+            // 第三步：跳转或执行其他操作
+            setTimeout(() => {
+              window.location.href = clickedUrl;
+            }, 1000);
+          }, 500); // 等待列表隐藏动画完成
         });
       });
     });
-</script>
+    </script>
