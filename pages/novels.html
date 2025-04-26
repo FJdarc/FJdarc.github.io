@@ -43,7 +43,12 @@ title: 小说
 
         const url = link.getAttribute('href');
 
-        novelDisplay.textContent = url;
+        const response = await fetch(url);
+        if (!response.ok) {
+          novelDisplay.textContent = '加载失败，请稍后再试。';
+          return;
+        }
+        novelDisplay = await response.text();
       });
     });
   });
