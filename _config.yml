@@ -61,3 +61,6 @@ novels:
   - author: 烽火戏诸侯
     name: 剑来
     url: /novels/jianlai.txt
+  - author: yui
+    name: test
+    url: /novels/test.txt
