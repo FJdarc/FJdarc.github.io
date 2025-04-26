@@ -4,8 +4,9 @@ title: 小说
 ---
 
 <style>
-  #url-display {
+  #novel-display {
     display: none;
+    white-space: pre-line;
   }
 </style>
 
@@ -23,32 +24,36 @@ title: 小说
       </div>
     {%- endfor %}
 
-    <div id="url-display"></div>
+    <div id="novel-display"></div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('.list-post a.hover-underline');
-    const urlDisplay = document.getElementById('url-display');
+    const novelDisplay = document.getElementById('novel-display');
   
     links.forEach(link => {
-      link.addEventListener('click', function(event) {
+      link.addEventListener('click', async (event) => {
         event.preventDefault();
-        
-        // 获取被点击链接的href
-        const targetUrl = this.href;
-        
-        // 将URL显示在div中（纯文本形式）
-        urlDisplay.textContent = targetUrl; 
-        // 如果需要显示可点击链接则用：
-        // urlDisplay.innerHTML = `<a href="${targetUrl}">${targetUrl}</a>`;
+                
+        novelDisplay.textContent = '正在加载...';
   
-        // 隐藏所有小说列表
         const allListPosts = document.querySelectorAll('.list-post');
         allListPosts.forEach(post => post.style.display = 'none');
         
-        // 显示URL容器
-        urlDisplay.style.display = 'block';
+        try {
+          const response = await fetch(this.href);
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+          
+          const text = await response.text();
+          novelDisplay.textContent = text;
+          history.pushState({ showContent: true }, '', this.href);
+        } catch (error) {
+          console.error('加载失败:', error);
+          novelDisplay.textContent = '小说加载失败，请稍后再试';
+        }
+
+        novelDisplay.style.display = 'block';
       });
     });
   });
