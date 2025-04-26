@@ -12,12 +12,6 @@
   align-items: center;
   padding: 8px 0;
 }
-.list-post .date {
-  color: #666666;
-  font-size: 14px;
-  flex-shrink: 0;
-  margin-right: 10px;
-}
 .list-post li .date {
   color: #666666;
   font-size: 14px;

@@ -55,9 +55,9 @@ extMath: false
 extCount: false
 
 novels:
-  - title: 道诡异仙
-    author: 狐尾的笔
+  - author: 狐尾的笔
+    name: 道诡异仙
     url: /novels/daoguiyixian.txt
-  - title: 剑来
-    author: 烽火戏诸侯
+  - author: 烽火戏诸侯
+    name: 剑来
     url: /novels/jianlai.txt
