@@ -1,7 +1,7 @@
 ---
 layout: mypost
 title: C++模板（template）详解
-categories: [设计模式, C++]
+categories: [keyword, C++]
 ---
 
 
