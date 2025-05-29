@@ -5,3 +5,5 @@ categories: [clang format, C++]
 ---
 
 [.clang-format 下载](.clang-format)
+[test.txt 下载](test.txt)
+[test.sh 下载](test.sh)
