@@ -1,7 +1,7 @@
 ---
 layout: mypost
-title: C++模板（template）详解
-categories: [keyword, C++]
+title: 我的.clang-format文件
+categories: [clang format, C++]
 ---
 
 [.clang-format 下载](.clang-format)
