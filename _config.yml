@@ -26,6 +26,7 @@ exclude:
         "Gemfile",
         "Gemfile.lock",
         "blog.sh",
+        "vendor",
     ]
 
 # 域名配置
