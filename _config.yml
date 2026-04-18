@@ -47,6 +47,8 @@ menu:
       url: /pages/categories.html
     - title: 搜索
       url: /pages/search.html
+    - title: 小说
+      url: /pages/novels.html
     # - title: 友链
     #   url: /pages/links.html
     # - title: 留言
@@ -71,3 +73,40 @@ extCount: false
 links:
     - title: TMaize Blog
       url: https://blog.tmaize.net
+
+# 小说
+novels:
+    - name: 末日时在做什么？有没有空？可以来拯救吗？
+      author: 枯野瑛
+      chapter: ["01", "02", "03", "04", "05", "EX"]
+    - name: 无职转生 ～到了异世界就拿出真本事～
+      author: 理不尽な孫の手
+      chapter:
+          [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07",
+              "08",
+              "09",
+              "10",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+          ]
