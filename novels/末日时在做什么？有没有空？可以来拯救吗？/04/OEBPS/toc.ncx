@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="urn:uuid:5208e6bb-5d25-45b0-a7fd-b97d79a85fd4" name="dtb:uid"/>
+    <meta content="0" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>末日时在做什么？有没有空？可以来拯救吗？4</text>
+  </docTitle>
+  <docAuthor>
+    <text>枯野瑛</text>
+  </docAuthor>
+  <navMap>
+    <navPoint id="cover" playOrder="0">
+      <navLabel>
+        <text>封面</text>
+      </navLabel>
+      <content src="Text/cover.xhtml"/>
+    </navPoint>
+    <navPoint id="message" playOrder="1">
+      <navLabel>
+        <text>制作信息</text>
+      </navLabel>
+      <content src="Text/message.xhtml"/>
+    </navPoint>
+    <navPoint id="introduction" playOrder="2">
+      <navLabel>
+        <text>简介</text>
+      </navLabel>
+      <content src="Text/introduction.xhtml"/>
+    </navPoint>
+    <navPoint id="illustration1" playOrder="3">
+      <navLabel>
+        <text>插图</text>
+      </navLabel>
+      <content src="Text/illustration1.xhtml"/>
+    </navPoint>
+    <navPoint id="contents" playOrder="4">
+      <navLabel>
+        <text>目录</text>
+      </navLabel>
+      <content src="Text/contents.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter01" playOrder="5">
+      <navLabel>
+        <text>「希望断绝的彼端」-despair and desire-</text>
+      </navLabel>
+      <content src="Text/chapter01.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter02" playOrder="6">
+      <navLabel>
+        <text>「甜蜜温柔的梦里」-puppets on stage-</text>
+      </navLabel>
+      <content src="Text/chapter02.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter03" playOrder="7">
+      <navLabel>
+        <text>「无法取回之物」-eggs had a great fall-</text>
+      </navLabel>
+      <content src="Text/chapter03.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter04" playOrder="8">
+      <navLabel>
+        <text>「叹月的最初之兽」-a piece of cake-</text>
+      </navLabel>
+      <content src="Text/chapter04.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter05" playOrder="9">
+      <navLabel>
+        <text>「末日时在做什么？」-rand guignol-</text>
+      </navLabel>
+      <content src="Text/chapter05.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

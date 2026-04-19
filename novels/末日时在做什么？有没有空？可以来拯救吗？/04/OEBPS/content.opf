@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title>末日时在做什么？有没有空？可以来拯救吗？4</dc:title>
+    <dc:creator opf:role="aut" opf:file-as="no2body">枯野瑛</dc:creator>
+    <dc:language>zh</dc:language>
+    <dc:subject>轻小说</dc:subject>
+    <dc:description>妖精兵珂朵莉·诺塔·瑟尼欧里斯消灭了，威廉·克梅修二等技官则与妖精兵奈芙莲一同遭到黑暗吞没。故事理应就此完结——然而……
+威廉在熟悉的房间醒来。
+「……爸爸？」向他搭话的，是理应身亡的女儿爱尔梅莉亚。
+此外，昔日伙伴纳维尔特里传达了有关真界再想圣歌队的真相。
+那是应已流逝于时光彼端的末日光景——
+暗夜之中，新诞生的〈兽〉发出咆吼。</dc:description>
+    <dc:source>深夜读书会ePub工作组</dc:source>
+    <dc:publisher>深夜读书会ePub工作组</dc:publisher>
+    <dc:date opf:event="publication">2017-10-09</dc:date>
+    <dc:date opf:event="modification">2020-12-27</dc:date>
+    <meta content="0.9.7" name="Sigil version" />
+    <dc:identifier opf:scheme="UUID" id="BookId">urn:uuid:5208e6bb-5d25-45b0-a7fd-b97d79a85fd4</dc:identifier>
+    <meta name="cover" content="cover.jpg" />
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title.xhtml" href="Text/title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="message.xhtml" href="Text/message.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contents.xhtml" href="Text/contents.xhtml" media-type="application/xhtml+xml"/>
+    <item id="style.css" href="Styles/style.css" media-type="text/css"/>
+    <item id="introduction.xhtml" href="Text/introduction.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illustration1.xhtml" href="Text/illustration1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illustration2.xhtml" href="Text/illustration2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter01.xhtml" href="Text/chapter01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter02.xhtml" href="Text/chapter02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter03.xhtml" href="Text/chapter03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter04.xhtml" href="Text/chapter04.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter05.xhtml" href="Text/chapter05.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter011.xhtml" href="Text/chapter011.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter021.xhtml" href="Text/chapter021.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter031.xhtml" href="Text/chapter031.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter041.xhtml" href="Text/chapter041.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter051.xhtml" href="Text/chapter051.xhtml" media-type="application/xhtml+xml"/>
+    <item id="x01.jpg" href="Images/01.jpg" media-type="image/jpeg"/>
+    <item id="x02.jpg" href="Images/02.jpg" media-type="image/jpeg"/>
+    <item id="x04.jpg" href="Images/04.jpg" media-type="image/jpeg"/>
+    <item id="x05.jpg" href="Images/05.jpg" media-type="image/jpeg"/>
+    <item id="x06.jpg" href="Images/06.jpg" media-type="image/jpeg"/>
+    <item id="x07.jpg" href="Images/07.jpg" media-type="image/jpeg"/>
+    <item id="x08.jpg" href="Images/08.jpg" media-type="image/jpeg"/>
+    <item id="cover.jpg" href="Images/cover.jpg" media-type="image/jpeg"/>
+    <item id="fm.ttf" href="Fonts/fm.ttf" media-type="application/x-font-ttf"/>
+    <item id="logo.xhtml" href="Text/logo.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ritdon.png" href="Images/ritdon.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml" properties="duokan-page-fullscreen"/>
+    <itemref idref="title.xhtml"/>
+    <itemref idref="message.xhtml"/>
+    <itemref idref="logo.xhtml"/>
+    <itemref idref="introduction.xhtml"/>
+    <itemref idref="illustration1.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="illustration2.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="contents.xhtml"/>
+    <itemref idref="chapter01.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter011.xhtml"/>
+    <itemref idref="chapter02.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter021.xhtml"/>
+    <itemref idref="chapter03.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter031.xhtml"/>
+    <itemref idref="chapter04.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter041.xhtml"/>
+    <itemref idref="chapter05.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter051.xhtml"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>

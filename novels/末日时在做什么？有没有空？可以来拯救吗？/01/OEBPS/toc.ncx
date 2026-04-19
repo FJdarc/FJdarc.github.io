@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+ "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:63adf839-bed4-41a5-9b05-76f5defd5688" />
+    <meta name="dtb:depth" content="1" />
+    <meta name="dtb:totalPageCount" content="0" />
+    <meta name="dtb:maxPageNumber" content="0" />
+  </head>
+  <docTitle>
+    <text>末日时在做什么？有没有空？可以来拯救吗？ 1</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>封面</text>
+      </navLabel>
+      <content src="Text/cover.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>制作信息</text>
+      </navLabel>
+      <content src="Text/message.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>简介</text>
+      </navLabel>
+      <content src="Text/Summary.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>作者/插画</text>
+      </navLabel>
+      <content src="Text/Author.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>彩页</text>
+      </navLabel>
+      <content src="Text/Illus1.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>目录</text>
+      </navLabel>
+      <content src="Text/contents-illus.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-7" playOrder="7">
+      <navLabel>
+        <text>『在这个世界告终以前—Ａ』-promise/result-</text>
+      </navLabel>
+      <content src="Text/Section001.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-8" playOrder="8">
+      <navLabel>
+        <text>『在太阳西斜的这个世界里』-broken chronograph-</text>
+      </navLabel>
+      <content src="Text/Section002.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-9" playOrder="9">
+      <navLabel>
+        <text>『天上之森』-late autumn night's dream-</text>
+      </navLabel>
+      <content src="Text/Section003.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-10" playOrder="10">
+      <navLabel>
+        <text>『等这场仗结束以后』-starry road to tomorrow-</text>
+      </navLabel>
+      <content src="Text/Section004.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-11" playOrder="11">
+      <navLabel>
+        <text>『在这个世界告终以前—Ｂ』-promise/result-</text>
+      </navLabel>
+      <content src="Text/Section005.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-12" playOrder="12">
+      <navLabel>
+        <text>后记/本应如此的幕后花絮</text>
+      </navLabel>
+      <content src="Text/Section006.xhtml" />
+    </navPoint>
+    <navPoint id="navPoint-13" playOrder="13">
+      <navLabel>
+        <text>封底</text>
+      </navLabel>
+      <content src="Text/backcover.xhtml" />
+    </navPoint>
+  </navMap>
+</ncx>
