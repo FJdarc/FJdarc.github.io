@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+ "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta content="urn:uuid:63adf839-bed4-41a5-9b05-76f5defd5688" name="dtb:uid"/>
+    <meta content="2" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>无职转生 ～到了异世界就拿出真本事～ 17</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>封面</text>
+      </navLabel>
+      <content src="Text/cover.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>制作信息</text>
+      </navLabel>
+      <content src="Text/message.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>简介</text>
+      </navLabel>
+      <content src="Text/summary.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>彩页</text>
+      </navLabel>
+      <content src="Text/illus1.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>目录</text>
+      </navLabel>
+      <content src="Text/contents.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>第十七章　青年期　阿斯拉王国篇（后）</text>
+      </navLabel>
+      <content src="Text/Section-Chapter1.xhtml"/>
+      <navPoint id="navPoint-7" playOrder="7">
+        <navLabel>
+          <text>第一话　「前往阿斯拉王国」</text>
+        </navLabel>
+        <content src="Text/Section001.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-8" playOrder="8">
+        <navLabel>
+          <text>第二话　「赤龙上腭」</text>
+        </navLabel>
+        <content src="Text/Section002.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-9" playOrder="9">
+        <navLabel>
+          <text>第三话　「推敲」</text>
+        </navLabel>
+        <content src="Text/Section003.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>第四话　「爱丽儿的选择」</text>
+        </navLabel>
+        <content src="Text/Section004.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-11" playOrder="11">
+        <navLabel>
+          <text>第五话　「朵莉丝堤娜」</text>
+        </navLabel>
+        <content src="Text/Section005.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-12" playOrder="12">
+        <navLabel>
+          <text>第六话　「路上」</text>
+        </navLabel>
+        <content src="Text/Section006.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-13" playOrder="13">
+        <navLabel>
+          <text>第七话　「王都亚尔斯」</text>
+        </navLabel>
+        <content src="Text/Section007.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-14" playOrder="14">
+        <navLabel>
+          <text>第八话　「黄昏的死斗」</text>
+        </navLabel>
+        <content src="Text/Section008.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-15" playOrder="15">
+        <navLabel>
+          <text>第九话　「爱丽儿的战场」</text>
+        </navLabel>
+        <content src="Text/Section009.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-16" playOrder="16">
+        <navLabel>
+          <text>第十话　「鲁迪乌斯的战场」</text>
+        </navLabel>
+        <content src="Text/Section010.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-17" playOrder="17">
+        <navLabel>
+          <text>第十一话　「路克失控」</text>
+        </navLabel>
+        <content src="Text/Section011.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-18" playOrder="18">
+        <navLabel>
+          <text>第十二话　「奥尔斯帝德的真相以及王都的十天」</text>
+        </navLabel>
+        <content src="Text/Section012.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-19" playOrder="19">
+        <navLabel>
+          <text>第十三话　「诀别的训练和希露菲的变化」</text>
+        </navLabel>
+        <content src="Text/Section013.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-20" playOrder="20">
+        <navLabel>
+          <text>第十四话　「归乡与决意」</text>
+        </navLabel>
+        <content src="Text/Section014.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-21" playOrder="21">
+        <navLabel>
+          <text>闲话　「？？？」</text>
+        </navLabel>
+        <content src="Text/Section015.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-22" playOrder="22">
+      <navLabel>
+        <text>特稿短篇小说</text>
+      </navLabel>
+      <content src="Text/Section016.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

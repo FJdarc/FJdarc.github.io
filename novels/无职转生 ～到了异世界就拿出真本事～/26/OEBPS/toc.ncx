@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+   "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+  <head>
+    <meta name="dtb:uid" content="urn:uuid:63adf839-bed4-41a5-9b05-76f5defd5688"/>
+    <meta name="dtb:depth" content="2"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>无职转生～到了异世界就拿出真本事～ 26</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>封面</text>
+      </navLabel>
+      <content src="Text/cover.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>制作信息</text>
+      </navLabel>
+      <content src="Text/message.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>简介</text>
+      </navLabel>
+      <content src="Text/summary.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>彩页</text>
+      </navLabel>
+      <content src="Text/illus1.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>目录</text>
+      </navLabel>
+      <content src="Text/contents.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>第二十六章　青年期 决定胜负篇</text>
+      </navLabel>
+      <content src="Text/Section-Chapter1.xhtml"/>
+      <navPoint id="navPoint-7" playOrder="7">
+        <navLabel>
+          <text>第一话　「斗神的威胁」</text>
+        </navLabel>
+        <content src="Text/Section001.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-8" playOrder="8">
+        <navLabel>
+          <text>第二话　「最后王牌」</text>
+        </navLabel>
+        <content src="Text/Section002.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-9" playOrder="9">
+        <navLabel>
+          <text>第三话　「转折点五」</text>
+        </navLabel>
+        <content src="Text/Section003.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>第四话　「战斗结束」</text>
+        </navLabel>
+        <content src="Text/Section004.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-11" playOrder="11">
+      <navLabel>
+        <text>最终章　完结篇</text>
+      </navLabel>
+      <content src="Text/Section-Chapter2.xhtml"/>
+      <navPoint id="navPoint-12" playOrder="12">
+        <navLabel>
+          <text>第一话　「最后的梦」</text>
+        </navLabel>
+        <content src="Text/Section005.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-13" playOrder="13">
+        <navLabel>
+          <text>第二话　「三十四岁」</text>
+        </navLabel>
+        <content src="Text/Section006.xhtml"/>
+      </navPoint>
+      <navPoint id="navPoint-14" playOrder="14">
+        <navLabel>
+          <text>最终话　「死后的世界」</text>
+        </navLabel>
+        <content src="Text/Section007.xhtml"/>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint-15" playOrder="15">
+      <navLabel>
+        <text>「阿斯拉王国人物录　『鲁迪乌斯•格雷拉特』」</text>
+      </navLabel>
+      <content src="Text/Section008.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-16" playOrder="16">
+      <navLabel>
+        <text>「后记」（节录自鲁迪乌斯之书第二十六集）</text>
+      </navLabel>
+      <content src="Text/Section009.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-17" playOrder="17">
+      <navLabel>
+        <text>终章　「序章之零」</text>
+      </navLabel>
+      <content src="Text/Section010.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-18" playOrder="18">
+      <navLabel>
+        <text>历代角色设计集</text>
+      </navLabel>
+      <content src="Text/Chart-illus.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-19" playOrder="19">
+      <navLabel>
+        <text>BW限定特典</text>
+      </navLabel>
+      <content src="Text/Special-illus.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-20" playOrder="20">
+      <navLabel>
+        <text>特稿短篇小说</text>
+      </navLabel>
+      <content src="Text/Special-2.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-21" playOrder="21">
+      <navLabel>
+        <text>全封</text>
+      </navLabel>
+      <content src="Text/ac1.xhtml"/>
+    </navPoint>
+    <navPoint id="navPoint-22" playOrder="22">
+      <navLabel>
+        <text>封底</text>
+      </navLabel>
+      <content src="Text/backcover.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

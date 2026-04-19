@@ -1,0 +1,178 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="BookId">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title>无职转生～到了异世界就拿出真本事～ 26</dc:title>
+    <dc:creator opf:role="aut" opf:file-as="kid">理不尽な孙の手</dc:creator>
+    <dc:identifier id="BookId" opf:scheme="UUID">urn:uuid:63adf839-bed4-41a5-9b05-76f5defd5688</dc:identifier>
+    <dc:date>2023-06-08T16:00:00+00:00</dc:date>
+    <dc:source>TSDM</dc:source>
+    <dc:rights>epub制作者：kid(天使动漫论坛)</dc:rights>
+    <dc:subject>轻小说</dc:subject>
+    <dc:language>zh-CN</dc:language>
+    <dc:identifier opf:scheme="calibre">4064e8d6-3ad8-470c-abe6-53c58d8b03ff</dc:identifier>
+    <meta name="Sigil version" content="0.9.10"/>
+    <meta name="cover" content="cover.jpg"/>
+    <meta name="calibre:title_sort" content="无职转生～到了异世界就拿出真本事～ 26"/>
+    <meta name="calibre:author_link_map" content="{&quot;理不尽な孙の手&quot;: &quot;&quot;}"/>
+  </metadata>
+  <manifest>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title.xhtml" href="Text/title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="message.xhtml" href="Text/message.xhtml" media-type="application/xhtml+xml"/>
+    <item id="summary.xhtml" href="Text/summary.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illus1.xhtml" href="Text/illus1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illus2.xhtml" href="Text/illus2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illus3.xhtml" href="Text/illus3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contents.xhtml" href="Text/contents.xhtml" media-type="application/xhtml+xml"/>
+    <item id="quotation.xhtml" href="Text/quotation.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section-Chapter1.xhtml" href="Text/Section-Chapter1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section001.xhtml" href="Text/Section001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section002.xhtml" href="Text/Section002.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section003.xhtml" href="Text/Section003.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section004.xhtml" href="Text/Section004.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section-Chapter2.xhtml" href="Text/Section-Chapter2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section005.xhtml" href="Text/Section005.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section006.xhtml" href="Text/Section006.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section007.xhtml" href="Text/Section007.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section008.xhtml" href="Text/Section008.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section009.xhtml" href="Text/Section009.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Section010.xhtml" href="Text/Section010.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-illus.xhtml" href="Text/Chart-illus.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-1.xhtml" href="Text/Chart-1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-2.xhtml" href="Text/Chart-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-3.xhtml" href="Text/Chart-3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-4.xhtml" href="Text/Chart-4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-5.xhtml" href="Text/Chart-5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-6.xhtml" href="Text/Chart-6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-7.xhtml" href="Text/Chart-7.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-8.xhtml" href="Text/Chart-8.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-9.xhtml" href="Text/Chart-9.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-10.xhtml" href="Text/Chart-10.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-11.xhtml" href="Text/Chart-11.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-12.xhtml" href="Text/Chart-12.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-13.xhtml" href="Text/Chart-13.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-14.xhtml" href="Text/Chart-14.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-15.xhtml" href="Text/Chart-15.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-16.xhtml" href="Text/Chart-16.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-17.xhtml" href="Text/Chart-17.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-18.xhtml" href="Text/Chart-18.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-19.xhtml" href="Text/Chart-19.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-20.xhtml" href="Text/Chart-20.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-21.xhtml" href="Text/Chart-21.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-22.xhtml" href="Text/Chart-22.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-23.xhtml" href="Text/Chart-23.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Chart-24.xhtml" href="Text/Chart-24.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Special-illus.xhtml" href="Text/Special-illus.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Special-1.xhtml" href="Text/Special-1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="Special-2.xhtml" href="Text/Special-2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ac1.xhtml" href="Text/ac1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ac2.xhtml" href="Text/ac2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="backcover.xhtml" href="Text/backcover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="style.css" href="Styles/style.css" media-type="text/css"/>
+    <item id="x001.jpg" href="Images/001.jpg" media-type="image/jpeg"/>
+    <item id="x002.jpg" href="Images/002.jpg" media-type="image/jpeg"/>
+    <item id="x003.jpg" href="Images/003.jpg" media-type="image/jpeg"/>
+    <item id="x004.jpg" href="Images/004.jpg" media-type="image/jpeg"/>
+    <item id="x005.jpg" href="Images/005.jpg" media-type="image/jpeg"/>
+    <item id="x006.jpg" href="Images/006.jpg" media-type="image/jpeg"/>
+    <item id="x007.jpg" href="Images/007.jpg" media-type="image/jpeg"/>
+    <item id="x008.jpg" href="Images/008.jpg" media-type="image/jpeg"/>
+    <item id="x009.jpg" href="Images/009.jpg" media-type="image/jpeg"/>
+    <item id="x010.jpg" href="Images/010.jpg" media-type="image/jpeg"/>
+    <item id="x011.jpg" href="Images/011.jpg" media-type="image/jpeg"/>
+    <item id="x013.jpg" href="Images/013.jpg" media-type="image/jpeg"/>
+    <item id="x014.jpg" href="Images/014.jpg" media-type="image/jpeg"/>
+    <item id="x015.jpg" href="Images/015.jpg" media-type="image/jpeg"/>
+    <item id="x016.jpg" href="Images/016.jpg" media-type="image/jpeg"/>
+    <item id="x017.jpg" href="Images/017.jpg" media-type="image/jpeg"/>
+    <item id="x018.jpg" href="Images/018.jpg" media-type="image/jpeg"/>
+    <item id="x019.jpg" href="Images/019.jpg" media-type="image/jpeg"/>
+    <item id="x020.jpg" href="Images/020.jpg" media-type="image/jpeg"/>
+    <item id="x021.jpg" href="Images/021.jpg" media-type="image/jpeg"/>
+    <item id="x022.jpg" href="Images/022.jpg" media-type="image/jpeg"/>
+    <item id="x023.jpg" href="Images/023.jpg" media-type="image/jpeg"/>
+    <item id="x024.jpg" href="Images/024.jpg" media-type="image/jpeg"/>
+    <item id="x025.jpg" href="Images/025.jpg" media-type="image/jpeg"/>
+    <item id="x026.jpg" href="Images/026.jpg" media-type="image/jpeg"/>
+    <item id="x027.jpg" href="Images/027.jpg" media-type="image/jpeg"/>
+    <item id="x028.jpg" href="Images/028.jpg" media-type="image/jpeg"/>
+    <item id="x029.jpg" href="Images/029.jpg" media-type="image/jpeg"/>
+    <item id="x030.jpg" href="Images/030.jpg" media-type="image/jpeg"/>
+    <item id="x031.jpg" href="Images/031.jpg" media-type="image/jpeg"/>
+    <item id="x032.jpg" href="Images/032.jpg" media-type="image/jpeg"/>
+    <item id="x033.jpg" href="Images/033.jpg" media-type="image/jpeg"/>
+    <item id="x034.jpg" href="Images/034.jpg" media-type="image/jpeg"/>
+    <item id="x035.jpg" href="Images/035.jpg" media-type="image/jpeg"/>
+    <item id="ac1.jpg" href="Images/ac1.jpg" media-type="image/jpeg"/>
+    <item id="ac2.jpg" href="Images/ac2.jpg" media-type="image/jpeg"/>
+    <item id="bc.jpg" href="Images/bc.jpg" media-type="image/jpeg"/>
+    <item id="co1.jpg" href="Images/co1.jpg" media-type="image/jpeg"/>
+    <item id="co2.jpg" href="Images/co2.jpg" media-type="image/jpeg"/>
+    <item id="co3.jpg" href="Images/co3.jpg" media-type="image/jpeg"/>
+    <item id="co4.jpg" href="Images/co4.jpg" media-type="image/jpeg"/>
+    <item id="co5.jpg" href="Images/co5.jpg" media-type="image/jpeg"/>
+    <item id="co6.jpg" href="Images/co6.jpg" media-type="image/jpeg"/>
+    <item id="cover.jpg" href="Images/cover.jpg" media-type="image/jpeg"/>
+    <item id="note.png" href="Images/note.png" media-type="image/png"/>
+    <item id="illus1.ttf" href="Fonts/illus1.ttf" media-type="application/x-font-ttf"/>
+    <item id="title.ttf" href="Fonts/title.ttf" media-type="application/x-font-ttf"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml"/>
+    <itemref idref="title.xhtml"/>
+    <itemref idref="message.xhtml"/>
+    <itemref idref="summary.xhtml"/>
+    <itemref idref="illus1.xhtml"/>
+    <itemref idref="illus2.xhtml"/>
+    <itemref idref="illus3.xhtml"/>
+    <itemref idref="contents.xhtml"/>
+    <itemref idref="quotation.xhtml"/>
+    <itemref idref="Section-Chapter1.xhtml"/>
+    <itemref idref="Section001.xhtml"/>
+    <itemref idref="Section002.xhtml"/>
+    <itemref idref="Section003.xhtml"/>
+    <itemref idref="Section004.xhtml"/>
+    <itemref idref="Section-Chapter2.xhtml"/>
+    <itemref idref="Section005.xhtml"/>
+    <itemref idref="Section006.xhtml"/>
+    <itemref idref="Section007.xhtml"/>
+    <itemref idref="Section008.xhtml"/>
+    <itemref idref="Section009.xhtml"/>
+    <itemref idref="Section010.xhtml"/>
+    <itemref idref="Chart-illus.xhtml"/>
+    <itemref idref="Chart-1.xhtml"/>
+    <itemref idref="Chart-2.xhtml"/>
+    <itemref idref="Chart-3.xhtml"/>
+    <itemref idref="Chart-4.xhtml"/>
+    <itemref idref="Chart-5.xhtml"/>
+    <itemref idref="Chart-6.xhtml"/>
+    <itemref idref="Chart-7.xhtml"/>
+    <itemref idref="Chart-8.xhtml"/>
+    <itemref idref="Chart-9.xhtml"/>
+    <itemref idref="Chart-10.xhtml"/>
+    <itemref idref="Chart-11.xhtml"/>
+    <itemref idref="Chart-12.xhtml"/>
+    <itemref idref="Chart-13.xhtml"/>
+    <itemref idref="Chart-14.xhtml"/>
+    <itemref idref="Chart-15.xhtml"/>
+    <itemref idref="Chart-16.xhtml"/>
+    <itemref idref="Chart-17.xhtml"/>
+    <itemref idref="Chart-18.xhtml"/>
+    <itemref idref="Chart-19.xhtml"/>
+    <itemref idref="Chart-20.xhtml"/>
+    <itemref idref="Chart-21.xhtml"/>
+    <itemref idref="Chart-22.xhtml"/>
+    <itemref idref="Chart-23.xhtml"/>
+    <itemref idref="Chart-24.xhtml"/>
+    <itemref idref="Special-illus.xhtml"/>
+    <itemref idref="Special-1.xhtml"/>
+    <itemref idref="Special-2.xhtml"/>
+    <itemref idref="ac1.xhtml"/>
+    <itemref idref="ac2.xhtml"/>
+    <itemref idref="backcover.xhtml"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="封面" href="Text/cover.xhtml"/>
+  </guide>
+</package>
