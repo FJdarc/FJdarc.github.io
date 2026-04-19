@@ -29,7 +29,7 @@ title: 小说
           </p>
           <div data-role="inline-controls" hidden></div>
           <div data-role="inline-reader-status"></div>
-          <div data-role="inline-reader">
+          <div data-role="inline-reader" hidden>
             <iframe data-role="chapter-frame" loading="lazy" scrolling="no" hidden></iframe>
           </div>
         </li>
@@ -265,6 +265,7 @@ title: 小说
       var frameBody;
       var frameHtml;
       var height;
+      var width;
 
       if (!frame) {
         return;
@@ -287,8 +288,18 @@ title: 小说
         return;
       }
 
-      frameBody.style.overflow = 'hidden';
-      frameHtml.style.overflow = 'hidden';
+      frameBody.style.overflowX = 'auto';
+      frameBody.style.overflowY = 'hidden';
+      frameHtml.style.overflowX = 'auto';
+      frameHtml.style.overflowY = 'hidden';
+
+      width = Math.max(
+        frameBody.scrollWidth,
+        frameBody.offsetWidth,
+        frameHtml.clientWidth,
+        frameHtml.scrollWidth,
+        frameHtml.offsetWidth
+      );
 
       height = Math.max(
         frameBody.scrollHeight,
@@ -299,6 +310,8 @@ title: 小说
       );
 
       frame.style.height = height + 'px';
+      frame.style.width = '100%';
+      frame.style.maxWidth = '100%';
     }
 
     function updatePagerButtons(card) {
@@ -362,9 +375,14 @@ title: 小说
           parts.frame.removeAttribute('src');
           parts.frame.style.height = '0px';
           parts.frame.style.width = '100%';
+          parts.frame.style.maxWidth = '100%';
           parts.frame.style.display = 'block';
           parts.frame.style.border = '0';
           parts.frame.style.overflow = 'hidden';
+
+          if (parts.frame.parentNode) {
+            parts.frame.parentNode.hidden = true;
+          }
         }
       });
     }
@@ -390,6 +408,17 @@ title: 小说
           parts.frame.hidden = true;
           parts.frame.removeAttribute('src');
           parts.frame.style.height = '0px';
+          parts.frame.style.width = '100%';
+          parts.frame.style.maxWidth = '100%';
+          parts.frame.style.display = 'block';
+          parts.frame.style.border = '0';
+          parts.frame.style.overflow = 'hidden';
+          parts.frame.style.margin = '0';
+          parts.frame.style.padding = '0';
+
+          if (parts.frame.parentNode) {
+            parts.frame.parentNode.hidden = true;
+          }
         }
       });
 
@@ -419,10 +448,15 @@ title: 小说
 
       if (parts.frame) {
         parts.frame.style.width = '100%';
+        parts.frame.style.maxWidth = '100%';
         parts.frame.style.display = 'block';
         parts.frame.style.border = '0';
         parts.frame.style.overflow = 'hidden';
         parts.frame.style.height = '0px';
+
+        if (parts.frame.parentNode) {
+          parts.frame.parentNode.hidden = true;
+        }
       }
     }
 
@@ -473,6 +507,11 @@ title: 小说
       xhtmlUrl = state.currentChapter.basePath + '/' + item.src;
 
       setReaderStatus(state.currentNovelCard, '', false);
+
+      if (parts.frame.parentNode) {
+        parts.frame.parentNode.hidden = false;
+      }
+
       parts.frame.hidden = false;
       parts.frame.style.height = '0px';
       parts.frame.src = encodeURI(xhtmlUrl);
@@ -639,11 +678,34 @@ title: 小说
 
       if (parts.frame) {
         parts.frame.style.width = '100%';
+        parts.frame.style.maxWidth = '100%';
         parts.frame.style.display = 'block';
         parts.frame.style.border = '0';
-        parts.frame.style.overflow = 'hidden';
+        parts.frame.style.overflowX = 'auto';
+        parts.frame.style.overflowY = 'hidden';
+        parts.frame.style.height = '0px';
 
         parts.frame.addEventListener('load', function () {
+          var frameDocument;
+          var styleElement;
+
+          try {
+            frameDocument = parts.frame.contentDocument || (parts.frame.contentWindow && parts.frame.contentWindow.document);
+          } catch (error) {
+            frameDocument = null;
+          }
+
+          if (frameDocument && frameDocument.head) {
+            styleElement = frameDocument.createElement('style');
+            styleElement.textContent = [
+              'html, body { max-width: 100%; overflow-x: auto; overflow-y: hidden; }',
+              'img { max-width: 100%; height: auto; }',
+              '.duokan-image-single, .kuan, .zhai { text-align: center !important; overflow-x: auto; }',
+              '.duokan-image-single img, .kuan img, .zhai img { display: inline-block; }'
+            ].join('\n');
+            frameDocument.head.appendChild(styleElement);
+          }
+
           resizeFrame(parts.frame);
           setReaderStatus(card, '', false);
         });
