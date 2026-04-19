@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" 
+		xmlns:opf="http://www.idpf.org/2007/opf" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dc:title />
+    <dc:language>zh</dc:language>
+    <dc:date opf:event="publication">2022-08-21</dc:date>
+    <dc:description />
+    <dc:creator opf:file-as="" opf:role="aut" />
+    <meta name="cover" content="Cover.jpg" />
+    <meta name="Sigil version" content="1.2.0" />
+    <dc:date xmlns:opf="http://www.idpf.org/2007/opf" opf:event="modification">2022-08-28</dc:date>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="css_css1" href="Styles/styles.css" media-type="text/css"/>
+    <item id="Cover.jpg" href="Images/Cover.jpg" media-type="image/jpeg"/>
+    <item id="chapter1" href="Text/CoverPage.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter2" href="Text/title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter3" href="Text/message.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter4" href="Text/Summary.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illu159153" href="Images/159153.jpg" media-type="image/jpeg"/>
+    <item id="illu159154" href="Images/159154.jpg" media-type="image/jpeg"/>
+    <item id="illu159155" href="Images/159155.jpg" media-type="image/jpeg"/>
+    <item id="illu159156" href="Images/159156.jpg" media-type="image/jpeg"/>
+    <item id="illu159157" href="Images/159157.jpg" media-type="image/jpeg"/>
+    <item id="illu159158" href="Images/159158.jpg" media-type="image/jpeg"/>
+    <item id="illu159159" href="Images/159159.jpg" media-type="image/jpeg"/>
+    <item id="illu159160" href="Images/159160.jpg" media-type="image/jpeg"/>
+    <item id="illu159161" href="Images/159161.jpg" media-type="image/jpeg"/>
+    <item id="illu159162" href="Images/159162.jpg" media-type="image/jpeg"/>
+    <item id="illu159163" href="Images/159163.jpg" media-type="image/jpeg"/>
+    <item id="illu159164" href="Images/159164.jpg" media-type="image/jpeg"/>
+    <item id="illu159165" href="Images/159165.jpg" media-type="image/jpeg"/>
+    <item id="illu159166" href="Images/159166.jpg" media-type="image/jpeg"/>
+    <item id="illu159167" href="Images/159167.jpg" media-type="image/jpeg"/>
+    <item id="chapter5" href="Text/Chapter_0.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter6" href="Text/Chapter_1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter7" href="Text/Chapter_2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter8" href="Text/Chapter_3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter9" href="Text/Chapter_4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter10" href="Text/Chapter_5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter11" href="Text/Chapter_6.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ref_toc" href="Text/contents.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="chapter1"/>
+    <itemref idref="chapter2"/>
+    <itemref idref="chapter3"/>
+    <itemref idref="chapter4"/>
+    <itemref idref="ref_toc" linear="no"/>
+    <itemref idref="chapter5"/>
+    <itemref idref="chapter6"/>
+    <itemref idref="chapter7"/>
+    <itemref idref="chapter8"/>
+    <itemref idref="chapter9"/>
+    <itemref idref="chapter10"/>
+    <itemref idref="chapter11"/>
+  </spine>
+  <guide>
+    <reference type="toc" title="目录" href="Text/contents.xhtml"/>
+    <reference type="text" title="封面" href="Text/CoverPage.xhtml"/>
+  </guide>
+</package>

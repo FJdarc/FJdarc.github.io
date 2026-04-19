@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+ "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd"><ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta content="urn:uuid:5208e6bb-5d25-45b0-a7fd-b97d79a85fd4" name="dtb:uid"/>
+    <meta content="0" name="dtb:depth"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>末日时在做什么？能不能再见一面？ 07</text>
+  </docTitle>
+  <docAuthor>
+    <text>枯野瑛</text>
+  </docAuthor>
+  <navMap>
+    <navPoint id="cover" playOrder="0">
+      <navLabel>
+        <text>封面</text>
+      </navLabel>
+      <content src="Text/cover.xhtml"/>
+    </navPoint>
+    <navPoint id="message" playOrder="1">
+      <navLabel>
+        <text>制作信息</text>
+      </navLabel>
+      <content src="Text/message.xhtml"/>
+    </navPoint>
+    <navPoint id="introduction" playOrder="2">
+      <navLabel>
+        <text>简介</text>
+      </navLabel>
+      <content src="Text/introduction.xhtml"/>
+    </navPoint>
+    <navPoint id="illustration1" playOrder="3">
+      <navLabel>
+        <text>彩页</text>
+      </navLabel>
+      <content src="Text/illustration1.xhtml"/>
+    </navPoint>
+    <navPoint id="contents" playOrder="4">
+      <navLabel>
+        <text>目录</text>
+      </navLabel>
+      <content src="Text/contents.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter1" playOrder="5">
+      <navLabel>
+        <text>「妖怪苏醒的故事」-through the dark nights-</text>
+      </navLabel>
+      <content src="Text/chapter1.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter2" playOrder="6">
+      <navLabel>
+        <text>「翠绿英雄谭」-braves' story-</text>
+      </navLabel>
+      <content src="Text/chapter2.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter3" playOrder="7">
+      <navLabel>
+        <text>「末日的箱庭」-approaching worldend-</text>
+      </navLabel>
+      <content src="Text/chapter3.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter4" playOrder="8">
+      <navLabel>
+        <text>「站在身旁之人，彼此握起的手」-bond of morn-</text>
+      </navLabel>
+      <content src="Text/chapter4.xhtml"/>
+    </navPoint>
+    <navPoint id="chapter5" playOrder="9">
+      <navLabel>
+        <text>「烟雨朦胧之夜」-masked deadman-</text>
+      </navLabel>
+      <content src="Text/chapter5.xhtml"/>
+    </navPoint>
+    <navPoint id="postscript" playOrder="10">
+      <navLabel>
+        <text>后记／推测为后记的某种事物</text>
+      </navLabel>
+      <content src="Text/postscript.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="BookId" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+    <dc:identifier opf:scheme="UUID" id="BookId">urn:uuid:5208e6bb-5d25-45b0-a7fd-b97d79a85fd4</dc:identifier>
+    <dc:title>末日时在做什么？能不能再见一面？ 06</dc:title>
+    <dc:creator opf:file-as="no2body" opf:role="aut">枯野瑛</dc:creator>
+    <dc:language>zh</dc:language>
+    <dc:rights>no2body</dc:rights>
+    <dc:subject>轻小说</dc:subject>
+    <dc:description>费奥多尔朝在镜子那端浮现笑意的黑发青年开口。
+能不能把你的力量借给我呢？——我要让悬浮大陆群坠落。
+将连锁绝望、连结希望的遗迹兵器莫乌尔涅握在手中，刻划于战场上的，是最后的谎言。
+
+「堕鬼族是恶人，绝不可相信。」
+虽然他没有资格待在玛格、缇亚忒还有菈琪旭等人身边，但这就是让「大家」获得幸福的唯一方法。
+
+科里拿第尔契市的长夜即将迎来曙光——</dc:description>
+    <dc:source>轻之国度ePub工作组</dc:source>
+    <dc:publisher>轻之国度ePub工作组</dc:publisher>
+    <dc:date opf:event="publication">2018-02-13</dc:date>
+    <dc:date opf:event="modification">2019-06-02</dc:date>
+    <meta content="0.9.7" name="Sigil version" />
+    <meta name="cover" content="cover.jpg" />
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="cover.xhtml" href="Text/cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="title.xhtml" href="Text/title.xhtml" media-type="application/xhtml+xml"/>
+    <item id="message.xhtml" href="Text/message.xhtml" media-type="application/xhtml+xml"/>
+    <item id="logo.xhtml" href="Text/logo.xhtml" media-type="application/xhtml+xml"/>
+    <item id="introduction.xhtml" href="Text/introduction.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illustration1.xhtml" href="Text/illustration1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illustration2.xhtml" href="Text/illustration2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="illustration3.xhtml" href="Text/illustration3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="contents.xhtml" href="Text/contents.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter1.xhtml" href="Text/chapter1.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter2.xhtml" href="Text/chapter2.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter3.xhtml" href="Text/chapter3.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter4.xhtml" href="Text/chapter4.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter5.xhtml" href="Text/chapter5.xhtml" media-type="application/xhtml+xml"/>
+    <item id="postscript.xhtml" href="Text/postscript.xhtml" media-type="application/xhtml+xml"/>
+    <item id="zhu.png" href="Images/zhu.png" media-type="image/png"/>
+    <item id="LK-logo.png" href="Images/LK-logo.png" media-type="image/png"/>
+    <item id="style.css" href="Styles/style.css" media-type="text/css"/>
+    <item id="fm.ttf" href="Fonts/fm.ttf" media-type="application/x-font-ttf"/>
+    <item id="chapter1a.xhtml" href="Text/chapter1a.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter2a.xhtml" href="Text/chapter2a.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter3a.xhtml" href="Text/chapter3a.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter4a.xhtml" href="Text/chapter4a.xhtml" media-type="application/xhtml+xml"/>
+    <item id="chapter5a.xhtml" href="Text/chapter5a.xhtml" media-type="application/xhtml+xml"/>
+    <item id="x05.jpg" href="Images/05.jpg" media-type="image/jpeg"/>
+    <item id="x02.jpg" href="Images/02.jpg" media-type="image/jpeg"/>
+    <item id="x03.jpg" href="Images/03.jpg" media-type="image/jpeg"/>
+    <item id="x01.jpg" href="Images/01.jpg" media-type="image/jpeg"/>
+    <item id="x04.jpg" href="Images/04.jpg" media-type="image/jpeg"/>
+    <item id="x00.jpg" href="Images/00.jpg" media-type="image/jpeg"/>
+    <item id="c02.jpg" href="Images/c02.jpg" media-type="image/jpeg"/>
+    <item id="c01.jpg" href="Images/c01.jpg" media-type="image/jpeg"/>
+    <item id="cover.jpg" href="Images/cover.jpg" media-type="image/jpeg"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover.xhtml" properties="duokan-page-fullscreen"/>
+    <itemref idref="title.xhtml"/>
+    <itemref idref="message.xhtml"/>
+    <itemref idref="logo.xhtml"/>
+    <itemref idref="introduction.xhtml"/>
+    <itemref idref="illustration1.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="illustration2.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="contents.xhtml"/>
+    <itemref idref="illustration3.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter1.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter1a.xhtml"/>
+    <itemref idref="chapter2.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter2a.xhtml"/>
+    <itemref idref="chapter3.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter3a.xhtml"/>
+    <itemref idref="chapter4.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter4a.xhtml"/>
+    <itemref idref="chapter5.xhtml" properties="duokan-page-fitwindow"/>
+    <itemref idref="chapter5a.xhtml"/>
+    <itemref idref="postscript.xhtml"/>
+  </spine>
+  <guide>
+    <reference type="toc" title="Table Of Contents" href="Text/contents.xhtml"/>
+    <reference type="cover" title="Cover" href="Text/cover.xhtml"/>
+  </guide>
+</package>
