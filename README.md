@@ -31,7 +31,7 @@ bundle install
 通过下面命令启动/编译项目
 
 ```bash
-bundle exec jekyll serve --watch --host=127.0.0.1 --port=8080
+bundle exec jekyll serve --watch --host=0.0.0.0 --port=8080
 bundle exec jekyll build --destination=dist
 ```
 
